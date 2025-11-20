@@ -1,0 +1,329 @@
+/* Custom Styles for Declercq Stortbeton */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Slider Transitions */
+.hero-slide {
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1 !important;
+}
+
+/* Fade In Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.fade-in-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Counter Animation */
+.counter {
+    display: inline-block;
+}
+
+/* Hover Effects */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Parallax Effect */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00563F;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #007A57;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Mobile Menu Transition */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+#mobile-menu.open {
+    max-height: 500px;
+}
+
+/* Image Hover Effects */
+.image-zoom {
+    overflow: hidden;
+}
+
+.image-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.image-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Button Pulse Effect */
+@keyframes buttonPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 86, 63, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 86, 63, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 86, 63, 0);
+    }
+}
+
+.btn-pulse {
+    animation: buttonPulse 2s infinite;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.05em;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #00563F 0%, #007A57 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Card Hover Effect */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Backdrop Blur Support */
+@supports (backdrop-filter: blur(10px)) {
+    .backdrop-blur-sm {
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* Print Styles */
+@media print {
+    header, footer, #mobile-menu-btn {
+        display: none;
+    }
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus Styles */
+a:focus, button:focus {
+    outline: 2px solid #007A57;
+    outline-offset: 2px;
+}
+
+/* Loading State */
+.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Skeleton Loading */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Utility Classes */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.box-shadow-lg {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation Delays */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+/* Pump Boom Animation */
+@keyframes pumpBoomRotate {
+    0%, 100% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+.pump-boom {
+    animation: pumpBoomRotate 4s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+/* Pump Pulse Animation for 65m circle */
+@keyframes pumpPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+.pump-pulse {
+    animation: pumpPulse 2s ease-in-out infinite;
+}
+
+/* Pulse Rings Animation */
+@keyframes pulseRing {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+}
+
+/* Calculator Result Animation */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gradient Background Animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-animated {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
