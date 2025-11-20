@@ -21,16 +21,15 @@ Moderne website voor Declercq Stortbeton - 50 jaar ervaring in stortbeton, granu
 
 ## Live Website
 
-Website is live op GitHub Pages: [Bekijk Website](https://jouw-username.github.io/declercq-stortbeton-redesign/)
+Website is live op GitHub Pages: [Bekijk Website](https://leelars.github.io/declercq-stortbeton-redesign/)
 
 ## Lokaal Draaien
 
-1. Open de `public` folder
-2. Start een lokale server:
+1. Start een lokale server in de root folder:
    ```bash
    python3 -m http.server 8000
    ```
-3. Open browser op `http://localhost:8000`
+2. Open browser op `http://localhost:8000`
 
 ## Contact
 
